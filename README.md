@@ -2,7 +2,7 @@
 
 Make sure you have to **dotnet core sdk** installed on your system, which you can download from [here](https://www.microsoft.com/net/download/core).
 
-To see if you have **dotnet core skd** open the terminal and type `dotnet -h`. You will see help messages on the termianl.
+To see if you have **dotnet core skd** open the terminal and type `dotnet -h`. You will see help messages on the terminal.
 
 
 
