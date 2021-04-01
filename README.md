@@ -14,22 +14,22 @@ To see if you have **dotnet core skd** open the terminal and type `dotnet -h`. Y
 * Within this directory run the following command `dotnet run` and hit enter.
 * After the program runs enter in the relevant information you are prompted to, for example:
 
-`Enter plateau coordinates`
-`5 5`
-
-
-`Enter rover starting position`
-`1 2 N`
-
-`Enter in the instructions for the rover`
-`LMLMLMLMM`
-
-`Would you like to enter in another rover`
-`no`
-
-`Output:`
-
-`1 3 N`
+> `Enter plateau coordinates`
+> `5 5`
+>
+>
+> `Enter rover starting position`
+> `1 2 N`
+>
+> `Enter in the instructions for the rover`
+> `LMLMLMLMM`
+>
+> `Would you like to enter in another rover`
+> `no`
+>
+> `Output:`
+>
+> `1 3 N`
 
 ## Running The Test for the Mars Rover
 
