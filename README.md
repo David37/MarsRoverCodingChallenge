@@ -12,7 +12,7 @@ To see if you have **dotnet core skd** open the terminal and type `dotnet -h`. Y
 
 *  Within the terminal open up the directory MarsRoverCodingChallenge/MarsRoverChallenge
 * Within this directory run the following command `dotnet run` and hit enter.
-* After the program runs enter in the relevant information you are prompted to, e.g.
+* After the program runs enter in the relevant information you are prompted to, for example:
 
 `Enter plateau coordinates`
 `5 5`
