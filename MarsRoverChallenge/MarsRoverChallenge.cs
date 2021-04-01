@@ -8,7 +8,7 @@ namespace MarsRoverChallenge
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter plateau coordinates");
+            Console.WriteLine("\nEnter plateau coordinates");
             string plateauCoordsString;
             (int x, int y) plateauCoords; 
             // Get valid plateau coordinates
@@ -16,34 +16,35 @@ namespace MarsRoverChallenge
             {
                 plateauCoordsString = Console.ReadLine();
                 var plateauCoordsArray= plateauCoordsString.Split(" ");
-                if(plateauCoordsArray.Length == 0 || plateauCoordsArray.Length>2
-                  || !Int32.TryParse(plateauCoordsString[0].ToString(), out  plateauCoords.x) 
-                  || !Int32.TryParse(plateauCoordsString[1].ToString(), out  plateauCoords.y))
+                Console.WriteLine(plateauCoordsString[1]);
+                if(plateauCoordsArray.Length !=2
+                  || !Int32.TryParse(plateauCoordsArray[1], out  plateauCoords.y)
+                  || !Int32.TryParse(plateauCoordsArray[0], out  plateauCoords.x)
+                  
+                  )
                 {
-                    Console.WriteLine("Please enter in valid plateau coordinates");
+                    Console.WriteLine("\nPlease enter in valid plateau coordinates in the format: x y");
                     continue;
                 }
                 break;
             }
-
             List<MarsRover> rovers = new List<MarsRover>();
 
             // Get one or more rover starting position(s) and instructions
             do {
                 
-                Console.WriteLine("\n");
                 string startingPos;
 
                 // Get valid rover starting position
                 while(true)
                 {
-                    Console.WriteLine("Enter rover starting position");
+                    Console.WriteLine("\nEnter rover starting position");
                     startingPos = Console.ReadLine();
                     string[] startingPosArray = startingPos.Split(" ");
 
                     if(startingPosArray.Length != 3)
                     {
-                        Console.WriteLine("Please enter in a valid starting position");
+                        Console.WriteLine("\nPlease enter in a valid starting position");
                         continue;
                     }
 
@@ -56,19 +57,20 @@ namespace MarsRoverChallenge
                       || xCoord > plateauCoords.x && xCoord < 0 
                       || yCoord > plateauCoords.y && yCoord < 0)
                         {
-                            Console.WriteLine("Please enter valid starting position");
+                            Console.WriteLine("\nPlease enter valid starting position");
                             continue;
                         }
                     break;
                 }
 
-                Console.WriteLine("Enter in the instructions for the rover");
+                Console.WriteLine("\nEnter in the instructions for the rover");
                 string instructions = Console.ReadLine();
                 rovers.Add(new MarsRover(plateauCoordsString, startingPos, instructions));
-                Console.WriteLine("Would you like to enter in another rover");
+                Console.WriteLine("\nWould you like to enter in another rover");
 
             } while((Console.ReadLine()[0].ToString().ToUpper() == "Y"));
 
+            Console.WriteLine("\nOutput:\n");
             // Move each rover sequentially and return print out their final positions
             foreach (var rover in rovers)
             {
